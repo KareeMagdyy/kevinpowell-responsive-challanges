@@ -4,12 +4,8 @@
 - All text is in the text.md file
 
 // Requirements
-1. Refer to the design specs for the
-  overall layout 
-2. The image should line up with
-  the sidebar in the section
-  below
-
+  1. Get all the navigation items next to one another
+  2. Add a space between all the items
 */
 
 *,
@@ -31,6 +27,10 @@ img {
 h1 {
   font-size: 3rem;
   margin-top: 0;
+}
+
+.section-title {
+  color: #87629a;
 }
 
 .btn {
@@ -56,11 +56,8 @@ h1 {
 }
 
 .row {
-  /* display: flex => flex container */
   display: flex;
   justify-content: space-between;
-  /* can't use yet */
-  /* gap: 100px; */
 }
 
 .col {
@@ -70,6 +67,37 @@ h1 {
 
 .col + .col {
   margin-left: 30px;
+}
+
+header {
+  background: #136c72;
+  padding: 1em 0;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.nav__item {
+  margin-right: 1.5em;
+}
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link--button {
+  background: #fff;
+  color: #136c72;
+  padding: 0.25em 1em;
+  border-radius: 10em;
+}
+
+.nav__link:hover {
+  opacity: 0.75;
 }
 
 .hero {
@@ -84,6 +112,7 @@ h1 {
 
 .hero__img {
   width: 32%;
+  align-self: flex-start;
 }
 
 .hero p {
@@ -91,22 +120,17 @@ h1 {
 }
 
 .main {
-  margin: 3em auto;
+  margin-top: 3em;
 }
 
 .primary-content {
   width: 62%;
 }
 
-.primary-content__tittle {
-  font-size: 3rem;
-  color: #136c72;
-}
-
 .sidebar {
-  text-align: center;
   width: 32%;
-  padding: 2em;
-  background-color: #136c72;
+  padding: 1em;
+  text-align: center;
   color: #fff;
+  background-color: #136c72;
 }
