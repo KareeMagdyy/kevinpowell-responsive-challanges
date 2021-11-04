@@ -58,6 +58,7 @@ h1 {
 .row {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .col {
@@ -65,13 +66,19 @@ h1 {
   width: 100%;
 }
 
-.col + .col {
-  margin-left: 30px;
-}
-
 header {
   background: #136c72;
   padding: 1em 0;
+}
+
+.logo {
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .nav__list {
@@ -79,10 +86,13 @@ header {
   padding: 0;
   list-style: none;
   display: flex;
+  gap: 1.5em;
 }
-.nav__item {
-  margin-right: 1.5em;
+
+.nav__list:first-of-type {
+  margin: 0 auto;
 }
+
 .nav__link {
   color: #fff;
   text-decoration: none;
@@ -133,4 +143,19 @@ header {
   text-align: center;
   color: #fff;
   background-color: #136c72;
+}
+
+@media (max-width: 600px) {
+  .row {
+    display: block;
+  }
+  .hero__text,
+  .hero__img,
+  .primary-content,
+  .sidebar {
+    width: 100%;
+  }
+  .hero__img {
+    margin-top: 2rem;
+  }
 }
